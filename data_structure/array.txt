@@ -1,0 +1,161 @@
+📘 ARRAY – Complete Notes (Memory + Bytes + Working)
+___________________________________________________________
+
+1️⃣ What is an Array?
+
+An array is a collection of elements stored in continuous memory locations.
+Example:
+[10, 20, 30, 40]
+
+Stored in memory like:
+Address     Value
+1000        10
+1004        20
+1008        30
+1012        40
+Each element sits right next to the previous one.
+This is why arrays are very fast.
+
+___________________________________________________________
+
+2️⃣ How Array is Stored in Memory
+
+Key idea:
+Array = continuous block of memory
+
+When you create:
+arr = [10, 20, 30]
+
+System allocates memory like:
+| 10 | 20 | 30 |
+All values placed one after another.
+
+___________________________________________________________
+
+3️⃣ Why Array Access is O(1)
+
+Because of this formula:
+Address of element = Base Address + (Index × Size of each element)
+
+Example:
+Base address = 1000
+Each int = 4 bytes
+
+Find arr[2]
+= 1000 + (2 × 4)
+= 1008
+
+Direct jump → no searching.
+That’s why arrays are very fast.
+
+___________________________________________________________
+
+4️⃣ How Many Bytes Each Element Takes
+
+Depends on data type & language.
+In C / Java (fixed size)
+Type	Size
+int	4 bytes
+char	1 byte
+float	4 bytes
+double	8 bytes
+boolean	1 byte
+
+Example:
+int arr[5]
+Memory used:
+5 × 4 = 20 bytes
+
+In Python (important!)
+Python does NOT store raw values directly like C.
+
+Python stores:
+Reference (pointer) to object
+So Python list is actually:
+
+[ pointer | pointer | pointer ]
+Each pointer ≈ 8 bytes (64-bit system)
+Each integer object itself ≈ 28 bytes
+So:
+arr = [1,2,3]
+Memory approx:
+List pointers: 3 × 8 = 24 bytes
+Integer objects: 3 × 28 = 84 bytes
+Total ≈ 108 bytes
+
+That’s why Python lists are memory heavy.
+
+___________________________________________________________
+
+5️⃣ Static vs Dynamic Array
+
+Static Array
+Fixed size
+Example: C array
+int arr[5]
+Cannot grow.
+
+Dynamic Array
+Can grow/shrink
+Example:
+Python list
+Java ArrayList
+JS array
+
+When full:
+Creates bigger array
+Copies data
+Adds new element
+
+___________________________________________________________
+
+6️⃣ Time Complexity
+Operation	Time
+Access by index	O(1)
+Update	O(1)
+Search	O(n)
+Insert at end	O(1) amortized
+Insert at middle	O(n)
+Delete	O(n)
+
+___________________________________________________________
+
+7️⃣ Why Insert is Slow in Middle
+Example:
+[10, 20, 30, 40]
+Insert 25 at index 2
+
+Need to shift:
+10 20 _ 30 40
+        ↑ move
+So time = O(n)
+
+___________________________________________________________
+
+8️⃣ Advantages of Arrays
+
+✔ Fast access
+✔ Easy traversal
+✔ Cache friendly
+✔ Simple structure
+
+9️⃣ Disadvantages
+
+❌ Fixed size (static arrays)
+❌ Slow insert/delete
+❌ Memory waste if size guessed wrong
+
+___________________________________________________________
+🔟 Real-world usage
+
+Arrays are used in:
+Databases
+Images (pixel grid)
+Buffers
+Matrices
+Heaps
+Stacks
+Queues
+Almost everywhere.
+
+___________________________________________________________

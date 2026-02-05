@@ -1,7 +1,6 @@
 //DSA and Algo ------------------ everything try 3 times with 3 days gap, if you remember change to complete else try again
 
-// ARRAY  --> done
-
+// ARRAY  --> completed
 // Linked List --> done tried-06-02-2026
 
 // stacks --> todo
