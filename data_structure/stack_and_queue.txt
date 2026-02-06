@@ -1,0 +1,66 @@
+📘 STACK 
+📌 Definition
+Stack is a linear data structure that follows:
+LIFO (Last In First Out)
+Last inserted element is removed first.
+
+📌 Real-Life Examples
+Call stack in Node.js
+Undo/Redo feature
+Browser back button
+Expression evaluation
+
+📌 Operations
+push() → add element
+pop() → remove last element
+peek() → see top element
+
+📌 Short JS Example
+let stack = [];
+// push
+stack.push(10);
+stack.push(20);
+stack.push(30);
+console.log(stack); // [10, 20, 30]
+// pop
+stack.pop();
+console.log(stack); // [10, 20]
+// peek
+console.log(stack[stack.length - 1]); // 20
+
+📌 Interview One-Line Answer
+Stack is a LIFO data structure where elements are added and removed from the top. It is used in recursion and function call management.
+
+___________________________________________________________
+
+📘 QUEUE 
+
+📌 Definition
+Queue is a linear data structure that follows:
+FIFO (First In First Out)
+First inserted element is removed first.
+
+📌 Real-Life Examples (VERY IMPORTANT FOR YOU)
+RabbitMQ
+Job processing
+Task scheduling
+API request handling
+
+📌 Operations
+enqueue → add element
+dequeue → remove first element
+
+📌 Short JS Example
+let queue = [];
+// enqueue
+queue.push(10);
+queue.push(20);
+queue.push(30);
+
+console.log(queue); // [10, 20, 30]
+// dequeue
+queue.shift();
+console.log(queue); // [20, 30]
+
+📌 Interview One-Line Answer
+Queue is a FIFO data structure where elements are added at the end and removed from the front. It is commonly used in background job processing like RabbitMQ.

@@ -1,0 +1,123 @@
+📘 Big-O Notation – Time Complexity Notes
+📌 What is Big-O?
+Big-O notation describes:
+How the running time of an algorithm grows as input size (n) increases.
+It does NOT measure exact time.
+It measures growth rate.
+
+📌 Why Big-O is Important?
+Helps compare algorithms
+Predicts performance for large data
+Helps write scalable code
+Used heavily in interviews
+
+📌 Basic Idea
+If input size increases:
+How much more time will the program take?
+That growth is Big-O.
+
+📌 Common Time Complexities
+🟢 O(1) — Constant Time
+Time does NOT depend on input size.
+Example:
+arr[0]
+Even if array has 10 or 10 lakh elements → same time.
+
+🟢 O(n) — Linear Time
+Time grows directly with input size.
+Example:
+for (let i = 0; i < n; i++) {
+   console.log(i);
+}
+If n doubles → time doubles.
+
+🟡 O(n²) — Quadratic Time
+Nested loops.
+Example:
+for (let i = 0; i < n; i++) {
+   for (let j = 0; j < n; j++) {
+       console.log(i, j);
+   }
+}
+If n doubles → time becomes 4x.
+
+🟡 O(log n) — Logarithmic Time
+Problem size reduces each step.
+Example:
+Binary search.
+
+🔴 O(n³) — Cubic Time
+Three nested loops.
+Very slow for large inputs.
+
+📌 How to Find Big-O (Important Rule)
+Given:
+T = an + b
+Steps:
+1️⃣ Find fastest growing term
+2️⃣ Remove constants
+Examples:
+T = 5n + 2        → O(n)
+T = 3n² + 4n + 7  → O(n²)
+T = 100           → O(1)
+T = n³ + n²       → O(n³)
+
+📌 Big-O From Code
+Single loop
+for (let i = 0; i < n; i++)
+Big-O: O(n)
+
+Two separate loops
+for (i=0; i<n; i++)
+for (j=0; j<n; j++)
+Time:
+n + n = 2n
+Big-O: O(n)
+(We ignore constants)
+
+Nested loop
+for (i=0; i<n; i++)
+   for (j=0; j<n; j++)
+Time:
+n × n = n²
+Big-O: O(n²)
+
+📌 Important Big-O Rules
+Rule 1: Ignore constants
+O(2n) = O(n)
+O(100n) = O(n)
+
+Rule 2: Keep highest power
+O(n² + n) = O(n²)
+
+Rule 3: Different loops → add
+O(n + m)
+
+Rule 4: Nested loops → multiply
+O(n × m)
+
+📌 Best / Average / Worst Case
+Example: Linear search
+Best case → O(1)
+Worst case → O(n)
+In interviews, we usually talk about: Worst case
+
+
+📌 Growth Speed (Fast → Slow)
+O(1)   → fastest
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+O(n³)
+O(2ⁿ)  → worst
+
+📌 Quick Memory Trick
+Ask:
+How many times does the loop run?
+
+Code Pattern	Big-O
+No loop	O(1)
+One loop	O(n)
+Nested loop	O(n²)
+Binary search	O(log n)
