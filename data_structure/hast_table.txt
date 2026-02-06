@@ -1,0 +1,112 @@
+📘 HASH TABLE — Notes
+
+📌 What is a Hash Table?
+A hash table is a data structure that stores data in:
+key → value format
+It gives very fast lookup, insert, and delete.
+Average time complexity: O(1)
+
+📌 Real-Life Examples
+JavaScript Objects {}
+JavaScript Map
+Database indexing
+Caching systems (Redis)
+___________________________________________________________
+
+📌 Basic Idea
+A hash table uses a hash function to convert a key into an index.
+Example:
+key → hash function → index → value stored
+So instead of searching the whole array,
+we directly go to the correct location.
+
+📌 Example
+Suppose we store:
+name → "Sri"
+age  → 25
+city → "Chennai"
+
+Internally it may look like:
+hash("name") → index 5
+hash("age")  → index 2
+hash("city") → index 8
+
+Values stored at those indexes.
+___________________________________________________________
+
+📌 JavaScript Example
+Using object (hash table):
+let user = {
+  name: "Sri",
+  age: 25
+};
+console.log(user.name); // O(1)
+Insert:
+user.city = "Chennai";
+Delete:
+delete user.age;
+Search:
+console.log(user["name"]);
+
+📌 Time Complexity
+Operation	Average	  Worst
+Insert	     O(1)	   O(n)
+Search	     O(1)	   O(n)
+Delete	     O(1)	   O(n)
+
+Worst case happens due to collisions.
+
+___________________________________________________________
+
+📌 What is a Hash Function?
+A function that converts a key into an index.
+Example:
+hash("cat") → 12
+hash("dog") → 7
+
+It decides where to store the value.
+__________________________________________________________
+
+📌 What is Collision? (IMPORTANT)
+Collision happens when:
+Two keys get same index.
+Example:
+hash("cat") → 5
+hash("act") → 5
+Both want to store at index 5.
+
+📌 How Collisions Are Handled
+1️⃣ Chaining (Most common)
+Store multiple values in same index using list.
+Index 5:
+[("cat", value1), ("act", value2)]
+
+2️⃣ Open Addressing
+Find another empty slot.
+___________________________________________________________
+
+📌 Hash Table vs Array
+Feature	           Array	Hash Table
+Access by index	    O(1)	O(1)
+Search by key	    O(n)	O(1)
+Stores data	Position-based	Key-based
+
+📌 When to Use Hash Table?
+Use when you need:
+Fast lookup
+Counting frequency
+Unique elements
+Caching
+Mapping data
+
+___________________________________________________________
+
+📌 Hash Table in JavaScript
+JS already gives:
+Object {} → basic hash table
+Map → advanced hash table
+Example:
+let map = new Map();
+map.set("name", "Sri");
+map.get("name");
+

@@ -2,12 +2,12 @@
 
 // ARRAY  --> completed
 // Linked List --> done tried-06-02-2026
-// STACK --> done
-// QUEUES --> done
+// STACK --> completed
+// QUEUES --> completed
+// HASH TABLE --> completed
 
-// HASH TABLE --> in progress
+// Two Pointers  --> in progress
 
-// Two Pointers  --> todo
 // sliding window --> todo
 // Recursion --> todo
 // backTracking --> todo
