@@ -7,8 +7,8 @@
 // HASH TABLE --> completed
 
 // Two Pointers  --> in progress
+// sliding window --> in progress
 
-// sliding window --> todo
 // Recursion --> todo
 // backTracking --> todo
 // sorthing --> todo
