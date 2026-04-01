@@ -1,10 +1,10 @@
 //DSA and Algo ------------------ everything try 3 times with 3 days gap, if you remember change to complete else try again
 
-// ARRAY  --> completed
-// Linked List --> done tried-06-02-2026
-// STACK --> completed
-// QUEUES --> completed
-// HASH TABLE --> completed
+// ARRAY  --> in progress
+// Linked List --> in progress
+// STACK --> todo
+// QUEUES --> todo
+// HASH TABLE --> todo
 
 // Two Pointers  --> in progress
 // sliding window --> in progress
