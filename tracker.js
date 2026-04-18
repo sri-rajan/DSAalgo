@@ -9,7 +9,7 @@
 // Two Pointers  --> in progress
 // sliding window --> in progress
 
-// ------- HARD -----
+// ------- INTERMEDIATE -----
 // Recursion --> todo
 // backTracking --> todo
 // sorthing --> todo
@@ -17,6 +17,8 @@
 // bit manipulation --> todo
 // Tree --> todo
 // Binery Search Trees --> todo
+
+// ---- HARD ------
 // Trie --> todo
 // Heaps --> todo
 // Greedy --> todo
